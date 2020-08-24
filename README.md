@@ -2,4 +2,4 @@
 
 Git Hub 101
 
-This is the first time I am using github version management so this is a first line from Rstudio
+Bare bone structure of the Task 71 Dashboard:  2020-08-24 12:18:28 IST
