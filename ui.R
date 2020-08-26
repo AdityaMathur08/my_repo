@@ -1,4 +1,5 @@
 library(shiny)
+library(stringr)
 
 # Define the UI for the apllication
 
@@ -23,8 +24,9 @@ shinyUI(pageWithSidebar(
   
   selectInput(inputId = "dataset",
               label = "Choose a Transformation:",
-              choices = c("rock", "pressure", "cars")
-  ),
+              choices = str_replace(grep(".XLSX",list.files("./Data"),value = TRUE),".XLSX",""),
+              selected = NULL ),
+  
   
   
   

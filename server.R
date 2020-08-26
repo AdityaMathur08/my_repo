@@ -1,5 +1,5 @@
 library(shiny)
-
+library(readxl)
 #Define the Server Logic required to generate and plot a random distribution
 
 
@@ -26,10 +26,7 @@ shinyServer(function(input,output){
   
   # Return the requested dataset ----
   datasetInput <- reactive({
-    switch(input$dataset,
-           "rock" = rock,
-           "pressure" = pressure,
-           "cars" = cars)
+    read_excel(paste("./Data/",input$dataset,".XLSX",sep = ""))
   })
   
   
